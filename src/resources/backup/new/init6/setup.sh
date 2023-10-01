@@ -1,7 +1,10 @@
 #!/bin/bash
 
+echo "unpacking java"
 tar -xf openjdk-11.0.2_linux-x64_bin.tar.gz --one-top-level=/opt
+echo "unpacking kafka"
 tar -xf kafka_2.13-3.2.0.tgz --one-top-level=/opt/kafka
+echo "unpacking zookeper"
 tar -xf apache-zookeeper-3.9.0-bin.tar.gz --one-top-level=/opt/zookeeper
 #mkdir -p kafka/config
 cp -r kafka/config /opt/kafka/config
@@ -20,6 +23,8 @@ cp -r scripts /opt
 
 chown -R kafka:kafka /opt
 chmod -R 700 /opt
+
+echo "setting env vars"
 
 #env_var start ------------------------------->
 
@@ -66,3 +71,7 @@ if [ "$limitHard" != "$hard" ]; then
 fi
 
 #ulimit end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+echo "installing completed!"
+
+sudo su - kafka

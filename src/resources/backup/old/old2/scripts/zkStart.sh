@@ -1,0 +1,1 @@
+/opt/zookeeper/current/bin/zkServer.sh start

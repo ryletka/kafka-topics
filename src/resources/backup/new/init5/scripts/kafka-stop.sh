@@ -1,0 +1,1 @@
+/opt/kafka/current/bin/kafka-server-stop.sh

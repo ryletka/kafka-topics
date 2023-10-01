@@ -1,0 +1,1 @@
+/opt/zookeeper/current/bin/zkCli.sh

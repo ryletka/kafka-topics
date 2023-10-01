@@ -1,0 +1,1 @@
+/opt/kafka/current/bin/kafka-server-start.sh /opt/kafka/config/server.properties > /opt/kafka/current/log.log 2>&1 &
